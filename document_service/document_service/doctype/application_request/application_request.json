@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-16 20:10:13.701519",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sgbu",
+  "customer",
+  "application_type",
+  "documents",
+  "application_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sgbu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Link",
+   "label": "Application Type",
+   "options": "Item"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Link",
+   "label": "Documents",
+   "options": "Customer Document"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Application Status",
+   "options": "Pending\nIn-Review\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Application Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-16 22:16:36.729590",
+ "modified_by": "Administrator",
+ "module": "Document Service",
+ "name": "Application Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
