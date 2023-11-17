@@ -6,10 +6,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "column_break_njhl",
   "document_type",
   "attach_file",
   "download",
-  "description"
+  "description",
+  "expiryrenewal_date"
  ],
  "fields": [
   {
@@ -48,12 +50,25 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Download"
+  },
+  {
+   "fieldname": "expiryrenewal_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Expiry/Renewal Date"
+  },
+  {
+   "fieldname": "column_break_njhl",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-17 00:14:58.526120",
+ "modified": "2023-11-17 18:42:05.027920",
  "modified_by": "Administrator",
  "module": "Document Service",
  "name": "Document Table",
