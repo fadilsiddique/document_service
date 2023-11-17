@@ -8,6 +8,7 @@
  "field_order": [
   "document_type",
   "attach_file",
+  "download",
   "description"
  ],
  "fields": [
@@ -38,12 +39,21 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Description"
+  },
+  {
+   "fieldname": "download",
+   "fieldtype": "Button",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Download"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-16 22:17:03.249704",
+ "modified": "2023-11-17 00:14:58.526120",
  "modified_by": "Administrator",
  "module": "Document Service",
  "name": "Document Table",
