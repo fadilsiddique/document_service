@@ -134,7 +134,16 @@ app_include_js = "/assets/document_service/js/customer_documents.js"
 
 # Scheduled Tasks
 # ---------------
-
+scheduler_events = {
+    "daily": [
+        "document_service.expiry_notification.notify_queue"
+    ],
+    "cron":{
+        "0/1 * * * *":[
+            "document_service.expiry_notification.notify_queue"
+        ]
+    }
+}
 # scheduler_events = {
 #	"all": [
 #		"document_service.tasks.all"
