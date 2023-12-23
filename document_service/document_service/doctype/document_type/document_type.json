@@ -18,7 +18,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 22:17:13.676084",
+ "modified": "2023-12-23 16:11:19.166468",
  "modified_by": "Administrator",
  "module": "Document Service",
  "name": "Document Type",
@@ -39,5 +39,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name1"
 }

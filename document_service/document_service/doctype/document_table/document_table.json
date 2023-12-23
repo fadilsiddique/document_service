@@ -22,7 +22,7 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Document Type",
-   "options": "Item"
+   "options": "Document Type"
   },
   {
    "fieldname": "attach_file",
@@ -68,7 +68,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-18 06:48:53.595899",
+ "modified": "2023-12-23 16:14:25.549062",
  "modified_by": "Administrator",
  "module": "Document Service",
  "name": "Document Table",
