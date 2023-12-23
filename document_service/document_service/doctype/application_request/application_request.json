@@ -8,7 +8,7 @@
   "section_break_sgbu",
   "customer",
   "application_type",
-  "application_status",
+  "status",
   "amended_from"
  ],
  "fields": [
@@ -24,16 +24,9 @@
   },
   {
    "fieldname": "application_type",
-   "fieldtype": "Link",
+   "fieldtype": "Table",
    "label": "Application Type",
-   "options": "Item"
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "application_status",
-   "fieldtype": "Select",
-   "label": "Application Status",
-   "options": "Pending\nIn-Review\nCompleted\nCancelled"
+   "options": "Application Type Table"
   },
   {
    "fieldname": "amended_from",
@@ -44,12 +37,19 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Application Status",
+   "options": "Open\nIn-Process\nCompleted\nInvoice Generated\nPayment Received\nCancelled"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-17 19:01:53.226227",
+ "modified": "2023-12-23 16:21:52.817241",
  "modified_by": "Administrator",
  "module": "Document Service",
  "name": "Application Request",
