@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "field:customer",
  "creation": "2023-11-16 20:10:13.701519",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -20,7 +20,8 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "unique": 1
   },
   {
    "fieldname": "application_type",
@@ -47,12 +48,12 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-12-23 16:21:52.817241",
+ "modified": "2023-12-23 17:03:39.161465",
  "modified_by": "Administrator",
  "module": "Document Service",
  "name": "Application Request",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -70,5 +71,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
 }
