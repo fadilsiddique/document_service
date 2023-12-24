@@ -13,7 +13,7 @@ frappe.ui.form.on("Application Request", {
                 },
                 freeze: true,
                 callback: (r) => {
-                    frappe.set_route('Form','Sales Invoice',r.message.name)
+                    frappe.set_route('Form', 'Sales Invoice', r.message.name)
                 }
             })
         })
