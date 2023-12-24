@@ -132,6 +132,12 @@ app_include_js = "/assets/document_service/js/customer_documents.js"
 #	}
 # }
 
+doc_events = {
+    "Sales Invoice": {
+        "on_submit":"document_service.api.update_request_status_after_invoice_generated"
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 scheduler_events = {

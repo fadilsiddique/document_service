@@ -2,7 +2,6 @@ import frappe
 import json
 
 @frappe.whitelist()
-
 def make_sales_invoice(customer,request_name,items):
     
     items = json.loads(items)
@@ -22,3 +21,15 @@ def make_sales_invoice(customer,request_name,items):
     doc.save()
 
     return doc
+
+def update_request_status_after_invoice_generated(doc,event):
+
+    if doc.custom_application_request:
+
+        doc = frappe.get_doc('Application Request',doc.custom_application_request)
+
+        doc.status = 'Invoice Generated'
+
+        doc.insert()
+        doc.save()
+
