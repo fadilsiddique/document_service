@@ -1,12 +1,15 @@
 {
  "actions": [],
- "autoname": "field:customer",
+ "autoname": "format:REQ-{customer}-{#####}",
  "creation": "2023-11-16 20:10:13.701519",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_sgbu",
   "customer",
+  "column_break_zags",
+  "customer_group",
+  "section_break_tbet",
   "application_type",
   "status",
   "amended_from"
@@ -19,15 +22,17 @@
   {
    "fieldname": "customer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Customer",
    "options": "Customer",
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "application_type",
    "fieldtype": "Table",
    "label": "Application Type",
-   "options": "Application Type Table"
+   "options": "Application Type Table",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -43,17 +48,33 @@
    "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Application Status",
-   "options": "Open\nIn-Process\nCompleted\nInvoice Generated\nPayment Received\nCancelled"
+   "options": "Open\nIn-Process\nCompleted\nInvoice Generated\nPartial Payment Received\nPayment Received\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zags",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "section_break_tbet",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-23 17:03:39.161465",
+ "modified": "2023-12-24 21:17:17.986735",
  "modified_by": "Administrator",
  "module": "Document Service",
  "name": "Application Request",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,9 +90,11 @@
    "write": 1
   }
  ],
+ "search_fields": "customer",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "customer",
  "track_changes": 1,
  "track_views": 1
 }
