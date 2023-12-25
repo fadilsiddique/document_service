@@ -134,7 +134,8 @@ app_include_js = "/assets/document_service/js/customer_documents.js"
 
 doc_events = {
     "Sales Invoice": {
-        "on_submit":"document_service.api.update_request_status_after_invoice_generated"
+        "on_submit":"document_service.api.update_request_status_after_invoice_generated",
+        "on_update_after_submit":"document_service.api.update_request_status_after_payment"
     }
 }
 
@@ -144,11 +145,20 @@ scheduler_events = {
     "daily": [
         "document_service.expiry_notification.notify_queue"
     ],
-    "cron":{
-        "0/1 * * * *":[
-            "document_service.expiry_notification.notify_queue"
-        ]
-    }
+    "monthly":[
+        "document_service.expiry_notification.notify_queue"
+    ],
+    "weekly":[
+        "document_service.expiry_notification.notify_queue"
+    ]
+    # "cron":{
+    #     "0/17 * * * *":[
+    #         "document_service.expiry_notification.notify_queue"
+    #     ],
+    #     "0/5 * * * *":[
+    #         "document_service.expiry_notification.notify_queue"
+    #     ]
+    # }
 }
 # scheduler_events = {
 #	"all": [
