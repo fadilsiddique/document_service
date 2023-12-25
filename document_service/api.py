@@ -26,10 +26,15 @@ def update_request_status_after_invoice_generated(doc,event):
 
     if doc.custom_application_request:
 
-        doc = frappe.get_doc('Application Request',doc.custom_application_request)
+        frappe.db.set_value('Application Request',doc.custom_application_request,'status','Invoice Generated')
 
-        doc.status = 'Invoice Generated'
+def update_request_status_after_payment(doc,event):
 
-        doc.insert()
-        doc.save()
+    if doc.custom_application_request:
+
+        if doc.status == 'Paid':
+            frappe.db.set_value('Application Request',doc.custom_application_request,'status','Payment Received')
+        elif doc.status == 'Partly Paid':
+            frappe.db.set_value('Application Request',doc.custom_application_request,'status','Partial Payment Received')
+
 
